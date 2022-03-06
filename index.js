@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const { helpCategoryId, leaveChannelId, welcomeRoleId, welcomeChannelId, rulesChannelId, rolesChannelId, generalChannelId } = require('./config.json');
 dotenv.config();
 const fs = require('node:fs');
+const keepAlive = require('./server');
 
 token = process.env.token;
 
@@ -97,4 +98,5 @@ client.on('guildMemberRemove', member => {
 
 });
 
+keepAlive()
 client.login(token);
