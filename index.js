@@ -68,7 +68,7 @@ client.on('guildMemberAdd', member => {
 		.setDescription(`Hey, ${member}!\n> Please read our community rules <#${rulesChannelId}> before continuing,\n> you can also find more information about our community in that channel aswell.\n> You can *optionally* get yourself some roles (such as colors) in <#${rolesChannelId}>.\n> Say hi to us in <#${generalChannelId}>!\n• Enjoy your stay! :D
 		`)
 	member.send({ content: 'https://discord.gg/ghZbR2rXbU', embeds: [infoMessage] }).catch(error => {
-		member.guild.channels.cache.get(welcomeChannelId).send({ content: `${member}>`, embeds: [infoMessage]});
+		member.guild.channels.cache.get(welcomeChannelId).send({ content: `${member}`, embeds: [infoMessage]});
 	});
 
 	// Welcome Message
